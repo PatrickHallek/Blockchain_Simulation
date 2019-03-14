@@ -1,0 +1,85 @@
+<div class="row">
+  <div class="col-lg-12">
+    <nb-card>
+      <nb-card-header>Blockchain</nb-card-header>
+      <nb-card-body>
+        <a *ngFor="let item of box; index as i" a>
+          <ng-template #card>
+            <nb-card class="popover-card">
+              <nb-card-header>Block {{box[i]}}</nb-card-header>
+              <nb-card-body>
+                <b><u> Pre-Hash</u></b><br> {{previousHash[i]}}
+                <br><br>
+                <b> <u>Hash:</u></b><br> {{hash[i]}}
+                <br><br>
+                <b> <u>Timestamp</u></b> <br> {{timestamp[i]}}
+                <br><br>
+                <b> <u>Tramsactions</u></b><br> {{transactions[i]}}
+                <br><br>
+                <b> <u>Nonce</u></b><br> {{nonce[i]}}
+                <br>
+              </nb-card-body>
+            </nb-card>
+          </ng-template>
+          <button class="btn btn-success with-margins" [nbPopover]="card">Block {{box[i]}} </button>
+        </a>
+        <ng-template #card>
+          <nb-card class="popover-card">
+            <nb-card-header>First Block</nb-card-header>
+            <nb-card-body>
+              <b><u> Pre-Hash</u></b> <br> {{previousHash[xlength.length-1]}}
+              <br><br>
+              <b> <u>Hash:</u></b><br>{{hash[xlength.length-1]}}
+              <br><br>
+              <b> <u>Timestamp</u></b> <br>{{timestamp[xlength.length-1]}}
+              <br><br>
+              <b> <u>Tramsactions</u></b> <br>{{transactions[xlength.length-1]}}
+              <br><br>
+              <b> <u>Nonce</u></b><br> {{nonce[xlength.length-1]}}
+              <br>
+            </nb-card-body>
+          </nb-card>
+        </ng-template>
+        <button class="btn btn-danger with-margins" [nbPopover]="card">First Block</button>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+<!--
+<div class="row">
+  <div class="col-md-2" *ngFor="let item of box; index as i">
+    <nb-card status="success">
+      <nb-card-header>Block {{box[i]}}</nb-card-header>
+      <nb-card-body>
+        <b><u> Pre-Hash</u></b> {{previousHash[i]}}
+        <br><br>
+        <b> <u>Hash:</u></b><br> {{hash[i]}}
+        <br><br>
+        <b> <u>Timestamp</u></b> {{timestamp[i]}}
+        <br><br>
+        <b> <u>Tramsactions</u></b> {{transactions[i]}}
+        <br><br>
+        <b> <u>Nonce</u></b> {{nonce[i]}}
+        <br>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-md-2">
+    <nb-card status="danger">
+      <nb-card-header>First Block</nb-card-header>
+      <nb-card-body>
+        <b><u> Pre-Hash</u></b> <br> {{previousHash[xlength.length-1]}}
+        <br><br>
+        <b> <u>Hash:</u></b><br>{{hash[xlength.length-1]}}
+        <br><br>
+        <b> <u>Timestamp</u></b> {{timestamp[xlength.length-1]}}
+        <br><br>
+        <b> <u>Tramsactions</u></b> {{transactions[xlength.length-1]}}
+        <br><br>
+        <b> <u>Nonce</u></b> {{nonce[xlength.length-1]}}
+        <br>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+-->

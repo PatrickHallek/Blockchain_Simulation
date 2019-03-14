@@ -1,0 +1,25 @@
+<nb-card accent="success">
+  <nb-card-header>Do transactions</nb-card-header>
+  <nb-card-body>
+    <div class="container" ng-app="postApp" ng-controller="postController">
+      <div class="col-sm-8 col-sm-offset-2">
+        <!-- FORM -->
+        <form ng-submit="postValues()">
+          <div class="form-group">
+            <label>From</label>
+            <input type="text" class="form-control" name="fromAddress" [(ngModel)]="fromAddress">
+          </div>
+          <div class="form-group">
+            <label>To</label>
+            <input type="text" class="form-control" name="toAddress" [(ngModel)]="toAddress">
+          </div>
+          <div class="form-group">
+            <label>Amount</label>
+            <input type="number" class="form-control" name="amount" [(ngModel)]="amount">
+          </div>
+          <button (click)="postValues()" type="submit" class="btn btn-outline-success">Submit</button>
+        </form>
+      </div>
+    </div>
+  </nb-card-body>
+</nb-card>

@@ -1,0 +1,19 @@
+<nb-card accent="success">
+  <nb-card-header>Balance {{address}}: {{balance}} </nb-card-header>
+  <nb-card-body>
+    <form ng-submit="getAddress()">
+      <div class="form-group">
+        <label>Address</label>
+        <div class="row">
+          <div class="col-md-7">
+            <input type="text" class="form-control" name="address" [(ngModel)]="address">
+          </div>
+          <div class="col-md-5">
+            <button (click)="getAddress()" type="submit" class="btn btn-outline-success">Submit</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <br>
+  </nb-card-body>
+</nb-card>

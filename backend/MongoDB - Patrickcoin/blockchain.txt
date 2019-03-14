@@ -1,0 +1,265 @@
+{
+    "_id" : ObjectId("5ba0cddc8c33009fb88ee6ac"),
+    "chain" : [ 
+        {
+            "previousHash" : "0",
+            "timestamp" : NumberLong(1483228800000),
+            "transactions" : [],
+            "hash" : "92f0d54e0d1af3bfa68b792b5300cd68c797d0737327ddfe6891965b992eb2ca",
+            "nonce" : 0
+        }, 
+        {
+            "previousHash" : "92f0d54e0d1af3bfa68b792b5300cd68c797d0737327ddfe6891965b992eb2ca",
+            "timestamp" : 1537522987197.0,
+            "transactions" : [ 
+                {
+                    "fromAddress" : "Sofia",
+                    "toAddress" : "Patrick",
+                    "amount" : 100
+                }, 
+                {
+                    "fromAddress" : "reward-adress",
+                    "toAddress" : "Miner",
+                    "amount" : 1
+                }
+            ],
+            "hash" : "00caef7448c5d8d62a6fb71a00ab993a48aa29f02cc4b0ef0d124e617cafa4d1",
+            "nonce" : 7
+        }, 
+        {
+            "previousHash" : "00caef7448c5d8d62a6fb71a00ab993a48aa29f02cc4b0ef0d124e617cafa4d1",
+            "timestamp" : 1537522995817.0,
+            "transactions" : [ 
+                {
+                    "fromAddress" : "Leo",
+                    "toAddress" : "Marie",
+                    "amount" : 15
+                }, 
+                {
+                    "fromAddress" : "reward-adress",
+                    "toAddress" : "Miner",
+                    "amount" : 1
+                }
+            ],
+            "hash" : "002cb519c5c5db52d92b72d2d66115835f728515bd4f3f10d13f752d4c649bd2",
+            "nonce" : 594
+        }, 
+        {
+            "previousHash" : "002cb519c5c5db52d92b72d2d66115835f728515bd4f3f10d13f752d4c649bd2",
+            "timestamp" : 1537553246618.0,
+            "transactions" : [ 
+                {
+                    "fromAddress" : "Peter",
+                    "toAddress" : "David",
+                    "amount" : 50
+                }, 
+                {
+                    "fromAddress" : "Developer wallet",
+                    "toAddress" : "Miner",
+                    "amount" : 1
+                }
+            ],
+            "hash" : "007cd6ce60552c2ff6ab45c8bfbcc4c42ea0065bed5d869e3c5ab34ad707f085",
+            "nonce" : 37
+        }, 
+        {
+            "previousHash" : "007cd6ce60552c2ff6ab45c8bfbcc4c42ea0065bed5d869e3c5ab34ad707f085",
+            "timestamp" : 1537553529326.0,
+            "transactions" : [ 
+                {
+                    "fromAddress" : "Oliver",
+                    "toAddress" : "Florian",
+                    "amount" : 20
+                }, 
+                {
+                    "fromAddress" : "Developer wallet",
+                    "toAddress" : "Miner",
+                    "amount" : 1
+                }
+            ],
+            "hash" : "001979f8f92fc767d7deb248e930fbe658ed882b0a07f7ab01acb250550fcb1e",
+            "nonce" : 113
+        }, 
+        {
+            "previousHash" : "001979f8f92fc767d7deb248e930fbe658ed882b0a07f7ab01acb250550fcb1e",
+            "timestamp" : 1537553539177.0,
+            "transactions" : [ 
+                {
+                    "fromAddress" : "Paula",
+                    "toAddress" : "Amir",
+                    "amount" : 35
+                }, 
+                {
+                    "fromAddress" : "Developer wallet",
+                    "toAddress" : "Miner",
+                    "amount" : 1
+                }
+            ],
+            "hash" : "000a77151a43881576ed0208a906af6881c6110ae7e1ad3038d870247fcaca54",
+            "nonce" : 255
+        }, 
+        {
+            "previousHash" : "000a77151a43881576ed0208a906af6881c6110ae7e1ad3038d870247fcaca54",
+            "timestamp" : 1537553733971.0,
+            "transactions" : [ 
+                {
+                    "fromAddress" : "Petra",
+                    "toAddress" : "Anne",
+                    "amount" : 70
+                }, 
+                {
+                    "fromAddress" : "Developer wallet",
+                    "toAddress" : "Miner",
+                    "amount" : 1
+                }
+            ],
+            "hash" : "004dda64085f4ff1b8a7759288adc4c3c8b0b4bc357ee1eb68d980ee11583200",
+            "nonce" : 104
+        }, 
+        {
+            "previousHash" : "004dda64085f4ff1b8a7759288adc4c3c8b0b4bc357ee1eb68d980ee11583200",
+            "timestamp" : 1537553787337.0,
+            "transactions" : [ 
+                {
+                    "fromAddress" : "Petra",
+                    "toAddress" : "Anne",
+                    "amount" : 70
+                }, 
+                {
+                    "fromAddress" : "Developer wallet",
+                    "toAddress" : "Miner",
+                    "amount" : 1
+                }
+            ],
+            "hash" : "008b86a194b7b7799a9e55d016b2f24d9e01e66023397e92ae4ed7a95207a900",
+            "nonce" : 47
+        }, 
+        {
+            "previousHash" : "008b86a194b7b7799a9e55d016b2f24d9e01e66023397e92ae4ed7a95207a900",
+            "timestamp" : 1537553792318.0,
+            "transactions" : [ 
+                {
+                    "fromAddress" : "Dana",
+                    "toAddress" : "Karsten",
+                    "amount" : 85
+                }, 
+                {
+                    "fromAddress" : "Developer wallet",
+                    "toAddress" : "Miner",
+                    "amount" : 1
+                }
+            ],
+            "hash" : "00e3904ee643f73be568ae99563359a2aed575c040d98c781c212747d783107e",
+            "nonce" : 462
+        }, 
+        {
+            "previousHash" : "00e3904ee643f73be568ae99563359a2aed575c040d98c781c212747d783107e",
+            "timestamp" : 1537568274812.0,
+            "transactions" : [ 
+                {
+                    "fromAddress" : "Paul",
+                    "toAddress" : "Anton",
+                    "amount" : 30
+                }, 
+                {
+                    "fromAddress" : "Developer wallet",
+                    "toAddress" : "Miner",
+                    "amount" : 1
+                }
+            ],
+            "hash" : "00a794a0b2d13360f0bafc3cdfdc0847e3855345f25634110a8b17edfef55104",
+            "nonce" : 600
+        }, 
+        {
+            "previousHash" : "00a794a0b2d13360f0bafc3cdfdc0847e3855345f25634110a8b17edfef55104",
+            "timestamp" : 1537568293911.0,
+            "transactions" : [ 
+                {
+                    "fromAddress" : "Peter",
+                    "toAddress" : "David",
+                    "amount" : 50
+                }, 
+                {
+                    "fromAddress" : "Developer wallet",
+                    "toAddress" : "Miner",
+                    "amount" : 1
+                }
+            ],
+            "hash" : "00fa11a7faf05fc7a306dd86bbf42b1073ee3f36b3613dcf64aa6a7e9f17018f",
+            "nonce" : 43
+        }, 
+        {
+            "previousHash" : "00fa11a7faf05fc7a306dd86bbf42b1073ee3f36b3613dcf64aa6a7e9f17018f",
+            "timestamp" : 1537568394822.0,
+            "transactions" : [ 
+                {
+                    "fromAddress" : "Oliver",
+                    "toAddress" : "Florian",
+                    "amount" : 20
+                }, 
+                {
+                    "fromAddress" : "Developer wallet",
+                    "toAddress" : "Miner",
+                    "amount" : 1
+                }
+            ],
+            "hash" : "009d621c0ca814a7152df0be48d5246a8e1cfb9d78e15a9e93ea2b9a3f7ff95b",
+            "nonce" : 40
+        }, 
+        {
+            "previousHash" : "009d621c0ca814a7152df0be48d5246a8e1cfb9d78e15a9e93ea2b9a3f7ff95b",
+            "timestamp" : 1537568413920.0,
+            "transactions" : [ 
+                {
+                    "fromAddress" : "Paula",
+                    "toAddress" : "Amir",
+                    "amount" : 35
+                }, 
+                {
+                    "fromAddress" : "Developer wallet",
+                    "toAddress" : "Miner",
+                    "amount" : 1
+                }
+            ],
+            "hash" : "009d6bca8de809bc41dcc1cc71ad7a4fa046a41e5ab99ff2effbb01a2bb5be6e",
+            "nonce" : 439
+        }, 
+        {
+            "previousHash" : "009d6bca8de809bc41dcc1cc71ad7a4fa046a41e5ab99ff2effbb01a2bb5be6e",
+            "timestamp" : 1537701083700.0,
+            "transactions" : [ 
+                {
+                    "fromAddress" : "Petra",
+                    "toAddress" : "Anne",
+                    "amount" : 70
+                }, 
+                {
+                    "fromAddress" : "Developer wallet",
+                    "toAddress" : "Miner",
+                    "amount" : 1
+                }
+            ],
+            "hash" : "00a8865ec9655cee1af6aa39b601b4114ac75f11c5db158923db24a12c4ead42",
+            "nonce" : 11
+        }, 
+        {
+            "previousHash" : "00a8865ec9655cee1af6aa39b601b4114ac75f11c5db158923db24a12c4ead42",
+            "timestamp" : 1537701203700.0,
+            "transactions" : [ 
+                {
+                    "fromAddress" : "Dana",
+                    "toAddress" : "Karsten",
+                    "amount" : 85
+                }, 
+                {
+                    "fromAddress" : "Developer wallet",
+                    "toAddress" : "Miner",
+                    "amount" : 1
+                }
+            ],
+            "hash" : "00613a10ea7f154172e04b4a084c34c28a0290a633b23a0542f86fef1f415155",
+            "nonce" : 270
+        }
+    ],
+    "difficulty" : 2
+}

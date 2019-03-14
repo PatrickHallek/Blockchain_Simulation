@@ -1,0 +1,31 @@
+<nb-card accent="success">
+    <nb-card-header>Open orders</nb-card-header>
+    <nb-card-body>
+<h5><b>
+<div class="row">
+    <div class="col-md-4">
+      Receiver
+    </div>
+    <div class="col-md-4">
+        Sender
+    </div>
+    <div class="col-md-4">
+        Amount
+    </div>
+</div>
+</b></h5>
+<a *ngFor="let item of receiver; index as i">
+  <div class="row">
+    <div class="col-md-4">
+      {{receiver[i]}}
+    </div>
+    <div class="col-md-4">
+      {{sender[i]}}
+    </div>
+    <div class="col-md-4">
+      {{amount[i]}}
+    </div>
+  </div>
+</a>
+</nb-card-body>
+</nb-card>
