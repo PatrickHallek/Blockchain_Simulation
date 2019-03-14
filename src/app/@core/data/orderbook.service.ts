@@ -14,7 +14,7 @@ export class OrderbookService {
   }
   updateOrders() {
     this.obj = this.http
-      .get("http://localhost:3000/orderbook")
+      .get("http://localhost:3000/transactions")
       .subscribe((data: any) => {
         for (let i = data[0].chain.length - 2, s = 0; i >= 0; i--) {
           s++;

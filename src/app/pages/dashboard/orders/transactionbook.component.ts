@@ -18,7 +18,7 @@ export class TransactionbookComponent implements OnInit {
     this.receiver = this.updateService.receiver;
     this.sender = this.updateService.sender;
     this.amount = this.updateService.amount;
-
+    console.log(this.sender);
   }
   ngOnChanges() {
   }
