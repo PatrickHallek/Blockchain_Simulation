@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { stringify } from "@angular/core/src/util";
+import { Blockchain } from "../../../services/models/blockchain.model";
+import { Subscription } from "rxjs";
+import { DataBaseService } from "../../../services/databse.service";
 
 @Component({
   selector: "ngx-orderbook",
@@ -8,11 +10,19 @@ import { stringify } from "@angular/core/src/util";
   styleUrls: ["./orderbook.component.scss"]
 })
 export class OrderbookComponent implements OnInit {
-  receiver: any = [];
-  sender: any = [];
-  amount: any = [];
+  public blockchain: Blockchain[] = [];
+  private blockchainSub: Subscription;
 
-  constructor() {}
-  ngOnChanges() {}
-  ngOnInit() {}
+  constructor(
+    private http: HttpClient,
+    private databaseService: DataBaseService
+  ) {}
+
+  ngOnInit() {
+    this.blockchainSub = this.databaseService
+      .getBlockchainListener()
+      .subscribe((blockchain: Blockchain[]) => {
+        this.blockchain = blockchain;
+      });
+  }
 }

@@ -9,7 +9,7 @@ var PostController = require("../controller/post-data");
 
 router.get('/transactions', GetController.getTransactions);
 router.get('/blockchain', GetController.getBlockchain);
-router.get('/mineTransaction', PostController.mineTransaction);
+router.get('/mineTransaction', GetController.mineTransaction);
 
 router.post('/createTransaction', PostController.createTransaction);
 

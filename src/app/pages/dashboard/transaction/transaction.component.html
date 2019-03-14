@@ -4,7 +4,7 @@
     <div class="container" ng-app="postApp" ng-controller="postController">
       <div class="col-sm-8 col-sm-offset-2">
         <!-- FORM -->
-        <form ng-submit="postValues()">
+        <form ng-submit="createTransaction()">
           <div class="form-group">
             <label>From</label>
             <input type="text" class="form-control" name="fromAddress" [(ngModel)]="fromAddress">
@@ -17,7 +17,7 @@
             <label>Amount</label>
             <input type="number" class="form-control" name="amount" [(ngModel)]="amount">
           </div>
-          <button (click)="postValues()" type="submit" class="btn btn-outline-success">Submit</button>
+          <button (click)="createTransaction()" type="submit" class="btn btn-outline-success">Submit</button>
         </form>
       </div>
     </div>

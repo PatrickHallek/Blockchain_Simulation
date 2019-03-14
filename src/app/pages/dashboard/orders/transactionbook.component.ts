@@ -1,6 +1,9 @@
 import { Component, OnInit, Injectable, Input } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { stringify } from "@angular/core/src/util";
+import { Transaction } from "../../../services/models/blockchain.model";
+import { Subscription } from "rxjs";
+import { DataBaseService } from "../../../services/databse.service";
 // import { MiningComponent } from "../mining/mining.component"
 
 @Component({
@@ -9,14 +12,19 @@ import { stringify } from "@angular/core/src/util";
   styleUrls: ["./transactionbook.component.scss"]
 })
 export class TransactionbookComponent implements OnInit {
-  receiver: any = [];
-  sender: any = [];
-  amount: any = [];
+  public transaction: Transaction[] = [];
+  private transactionSub: Subscription;
 
-  constructor() {
-    console.log(this.sender);
+  constructor(
+    private http: HttpClient,
+    private databaseService: DataBaseService
+  ) {}
+
+  ngOnInit() {
+    this.transactionSub = this.databaseService
+      .getTransactionListener()
+      .subscribe((transaction: Transaction[]) => {
+        this.transaction = transaction;
+      });
   }
-  ngOnChanges() {
-  }
-  ngOnInit() {}
 }

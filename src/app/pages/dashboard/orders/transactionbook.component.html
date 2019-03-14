@@ -14,16 +14,16 @@
     </div>
 </div>
 </b></h5>
-<a *ngFor="let item of receiver; index as i">
+<a *ngFor="let item of transaction">
   <div class="row">
     <div class="col-md-4">
-      {{receiver[i]}}
+      {{item.toAddress}}
     </div>
     <div class="col-md-4">
-      {{sender[i]}}
+      {{item.fromAddress}}
     </div>
     <div class="col-md-4">
-      {{amount[i]}}
+      {{item.amount}}
     </div>
   </div>
 </a>

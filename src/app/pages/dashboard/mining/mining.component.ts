@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { DataBaseService } from "../../../services/databse.service";
 @Component({
   selector: "ngx-mining",
   templateUrl: "./mining.component.html",
@@ -9,14 +10,9 @@ export class MiningComponent implements OnInit {
   difficulty: Number;
   miner: any = [];
 
-  constructor(
-    private http: HttpClient,
-  ) {
-    this.http.get("http://localhost:3000/orderbook").subscribe((data: any) => {
-      this.difficulty = data[0].difficulty;
-    });
-  }
+  constructor(private http: HttpClient, private databaseService: DataBaseService) {}
   submitMining() {
+    this.databaseService.mineTransaction();
   }
   ngOnInit() {}
 }

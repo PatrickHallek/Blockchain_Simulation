@@ -1,5 +1,5 @@
 <nb-card accent="success" >
-  <nb-card-header>Orderbook</nb-card-header>
+  <nb-card-header>Transaction history</nb-card-header>
   <nb-card-body>
     <h5><b>
         <div class="row">
@@ -14,16 +14,16 @@
           </div>
         </div>
       </b></h5>
-    <a *ngFor="let item of receiver; index as i">
+    <a *ngFor="let item of blockchain">
       <div class="row">
         <div class="col-md-4">
-          {{receiver[i]}}
+          {{item.transactions[0].toAddress}}
         </div>
         <div class="col-md-4">
-          {{sender[i]}}
+          {{item.transactions[0].fromAddress}}
         </div>
         <div class="col-md-4">
-          {{amount[i]}}
+          {{item.transactions[0].amount}}
         </div>
       </div>
     </a>
