@@ -12,7 +12,7 @@ import { DataBaseService } from "../../../services/databse.service";
 export class TransactionComponent implements OnInit {
   fromAddress: String;
   toAddress: String;
-  amount: Number;
+  amount: number;
 
   constructor(
     private http: HttpClient,

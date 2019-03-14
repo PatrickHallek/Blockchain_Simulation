@@ -3,11 +3,11 @@ export interface Blockchain {
   timestamp: String;
   transactions: Transaction[];
   hash: String;
-  nonce: Number;
+  nonce: number;
 }
 
 export interface Transaction {
   fromAddress: String;
   toAddress: String;
-  amount: Number;
+  amount: number;
 }

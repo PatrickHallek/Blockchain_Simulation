@@ -1,5 +1,4 @@
 var MongoClient = require("mongodb").MongoClient;
-const SHA256 = require("crypto-js/sha256");
 
 var Transaction = require('../models/transaction-schema');
 var Blockchain = require('../models/blockchain-schema');

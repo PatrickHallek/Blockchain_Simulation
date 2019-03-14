@@ -11,6 +11,7 @@ export class DataBaseService {
   private blockchainUpdated = new Subject<Blockchain[]>();
   private transactions: Transaction[];
   private transactionsUpdated = new Subject<Transaction[]>();
+  private balance;
 
   constructor(private http: HttpClient) {
     this.getTransaction();
@@ -33,7 +34,7 @@ export class DataBaseService {
       });
   }
   createTransaction(transaction: Transaction) {
-    console.log(transaction)
+    console.log(transaction);
     this.http
       .post<Transaction>("http://localhost:3000/createTransaction", transaction)
       .subscribe(data => {
@@ -41,6 +42,25 @@ export class DataBaseService {
         this.getBlockchain();
       });
   }
+
+  public getBalance(address) {
+    let balance = 0;
+    for (let i = 0; i < this.blockchain.length; i++) {
+      for (let z = 0; z < this.blockchain[i].transactions.length; z++) {
+        const sender = this.blockchain[i].transactions[z].fromAddress;
+        const receiver = this.blockchain[i].transactions[z].toAddress;
+        const amount: number = this.blockchain[i].transactions[z].amount;
+        if (sender === address) {
+          balance -= amount;
+        }
+        if (receiver === address) {
+          balance += amount;
+        }
+      }
+    }
+    return balance
+  }
+
   getBlockchain() {
     this.http
       .get<Blockchain[]>("http://localhost:3000/blockchain")

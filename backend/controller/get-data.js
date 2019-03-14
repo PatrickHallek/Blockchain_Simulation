@@ -1,5 +1,6 @@
 var Transaction = require('../models/transaction-schema');
 var Blockchain = require('../models/blockchain-schema');
+const SHA256 = require("crypto-js/sha256");
 
 exports.getTransactions = (req, res, next) => {
   Transaction.find({}).then(data => {

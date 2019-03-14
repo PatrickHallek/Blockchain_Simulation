@@ -1,7 +1,7 @@
 <nb-card accent="success">
-  <nb-card-header>Balance {{address}}: {{balance}} </nb-card-header>
+  <nb-card-header>Balance: {{balance}} </nb-card-header>
   <nb-card-body>
-    <form ng-submit="getAddress()">
+    <form ng-submit="getBalance()">
       <div class="form-group">
         <label>Address</label>
         <div class="row">
@@ -9,7 +9,7 @@
             <input type="text" class="form-control" name="address" [(ngModel)]="address">
           </div>
           <div class="col-md-5">
-            <button (click)="getAddress()" type="submit" class="btn btn-outline-success">Submit</button>
+            <button (click)="getBalance()" type="submit" class="btn btn-outline-success">Submit</button>
           </div>
         </div>
       </div>
