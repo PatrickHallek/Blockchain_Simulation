@@ -1,4 +1,5 @@
 // dependencies
+require('dotenv').config()
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -6,7 +7,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-
 var routes = require('./routes/index');
 
 var app = express();
@@ -41,7 +41,7 @@ app.use(bodyParser.urlencoded({
 app.use('/', routes);
 
 // mongoose
-mongoose.connect('mongodb://localhost/passport_local_mongoose_express4');
+mongoose.connect(process.env.MONGO_DB);
 mongoose.Promise = require('bluebird');
 
 // catch 404 and forward to error handler

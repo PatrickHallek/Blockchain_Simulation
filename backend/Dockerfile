@@ -1,5 +1,5 @@
-FROM node:8
-WORKDIR /src
+FROM node:10
 COPY . /src
+WORKDIR /src
 RUN npm install
-EXPOSE 4200
+EXPOSE 3000

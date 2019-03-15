@@ -6,7 +6,7 @@
         <a *ngFor="let item of blockchain; index as i">
           <ng-template #card>
             <nb-card class="popover-card">
-              <nb-card-header>Block {{i}}</nb-card-header>
+              <nb-card-header>Block {{i+1}}</nb-card-header>
               <nb-card-body>
                 <b><u> Pre-Hash</u></b><br> {{item.previousHash}}
                 <br><br>
@@ -21,7 +21,7 @@
               </nb-card-body>
             </nb-card>
           </ng-template>
-          <button *ngIf="i != 0" class="btn btn-success with-margins" [nbPopover]="card">Block {{i}} </button>
+          <button *ngIf="i != 0" class="btn btn-success with-margins" [nbPopover]="card">Block {{i+1}} </button>
           <button *ngIf="i === 0" class="btn btn-danger with-margins" [nbPopover]="card">First Block </button>
         </a>
       </nb-card-body>

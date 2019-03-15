@@ -8,6 +8,9 @@ services:
       - .:/src
     restart: always
     command: npm start
+    depends_on:
+      - backend
+      - mongodb
   backend:
     build: ./backend/
     ports:
@@ -15,6 +18,11 @@ services:
     volumes:
       - ./backend:/src
     command: npm start
+    restart: always
+    depends_on:
+      - mongodb
+    environment:
+      MONGO_DB: "mongodb://mongodb/Blockchain_Simulation"
   mongodb:
     image: mongo:4.1.7
     ports:
