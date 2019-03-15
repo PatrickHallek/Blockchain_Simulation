@@ -12,6 +12,7 @@ export class DataBaseService {
   private transactions: Transaction[];
   private transactionsUpdated = new Subject<Transaction[]>();
   private balance;
+  public spinner= new Subject<boolean>();
 
   constructor(private http: HttpClient) {
     this.getTransaction();
@@ -25,12 +26,20 @@ export class DataBaseService {
     return this.transactionsUpdated.asObservable();
   }
 
+  public getSpinnerListener() {
+    return this.spinner.asObservable();
+  }
+
   mineTransaction() {
     this.http
       .get<Blockchain[]>("http://localhost:3000/mineTransaction")
       .subscribe(data => {
-        this.getTransaction();
-        this.getBlockchain();
+        this.spinner.next(true);
+        setTimeout(() => {
+          this.getTransaction();
+          this.getBlockchain();
+          this.spinner.next(false);
+        }, 2000);
       });
   }
   createTransaction(transaction: Transaction) {
@@ -58,7 +67,7 @@ export class DataBaseService {
         }
       }
     }
-    return balance
+    return balance;
   }
 
   getBlockchain() {

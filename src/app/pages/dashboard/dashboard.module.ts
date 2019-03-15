@@ -13,6 +13,7 @@ import { BalanceComponent } from './balance/balance.component';
 import { NgxPopoverCardComponent } from './blockchain/blockchain-exsample.component';
 import { NgxPopoverFormComponent } from './blockchain/blockchain-exsample.component';
 import { NgxPopoverTabsComponent } from './blockchain/blockchain-exsample.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 
 
@@ -30,6 +31,7 @@ import { NgxPopoverTabsComponent } from './blockchain/blockchain-exsample.compon
     TransactionbookComponent,
     BlockchainComponent,
     BalanceComponent,
+    SpinnerComponent,
   ],
 })
 export class DashboardModule { }
