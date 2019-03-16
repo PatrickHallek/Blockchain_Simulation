@@ -24,6 +24,8 @@ Clone the repository:
 git clone https://github.com/PatrickHallek/Blockchain_Simulation
 ```
 
+Install the the NoSQL-database from here: [MongoDB](https://www.mongodb.com/download-center/community)
+
 Install all [node](https://nodejs.org/en/) packages for the Angular frontend:
 
 ```cmd
