@@ -3,6 +3,7 @@
 This is a simplified simulation of how a blockchain works. The Dashboard was made with the [Akveo ngx-admin template](https://github.com/akveo/ngx-admin).
 ![Demonstration](https://raw.githubusercontent.com/PatrickHallek/Blockchain-Simulation/master/src/assets/blockchain.gif)
 
+
 ## Installation with Docker (recommended)
 
 Clone the repository:
